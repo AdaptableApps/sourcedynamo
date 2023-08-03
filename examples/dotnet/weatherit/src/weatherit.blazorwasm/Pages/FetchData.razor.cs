@@ -17,11 +17,13 @@ public partial class FetchData
     try
     {
       var httpClient = new HttpClient() {BaseAddress = new Uri(CoreStatic.ServerBaseUrl)};
+      httpClient.DefaultRequestHeaders.Clear();
       httpClient.DefaultRequestHeaders.Add("Origin", CoreStatic.ClientBaseUrl);
 
       httpClient.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", CoreStatic.ClientBaseUrl);
       
       var httpRequest = new HttpRequestMessage(HttpMethod.Get, "WeatherForecast");
+      httpRequest.Headers.Clear();
       httpRequest.SetBrowserRequestMode(BrowserRequestMode.Cors);
       httpRequest.Headers.Add("Origin", CoreStatic.ClientBaseUrl);
 
