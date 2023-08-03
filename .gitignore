@@ -396,3 +396,28 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Typescript build files
+_build/
+
+# macOS Specific Files
+.DS_Store
+
+# rider workspace configuration files
+.idea
+.idea/
+
+#dotnet publish folders
+web-publish
+published
+Published
+
+#node webpack bundled files
+.vscode/
+.vscode/*
+build
+build/
+build/*
+_build
+_build/
+_build/*

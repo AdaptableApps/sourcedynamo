@@ -1,0 +1,145 @@
+﻿/*
+ *
+ * Generated Class - Do not Modify!
+ *
+ */
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+using Newtonsoft.Json;
+using GalaSoft.MvvmLight.Ioc;
+
+using static aa.cs.core.net.SystemExtensions.CsStringExtensions;
+using aa.cs.core.net;
+using aa.cs.core.net.Enums;
+using static aa.cs.core.net.Enums.CsEnums;
+using aa.cs.shared.net.Attributes;
+using aa.cs.core.net.Constants;
+using aa.cs.core.net.Helpers;
+using aa.cs.core.net.Interfaces;
+using aa.cs.core.net.Models;
+using aa.cs.core.net.Models.Helper;
+using aa.cs.core.net.SystemExtensions;
+using aa.cs.core.net.Types;
+
+namespace aa.cs.core.net.Models
+{
+  public partial class {{Code}}: {{ModelBaseClassExpression}}
+  {
+    #region Fields - Generated Do not Modify!
+{{Fields}}
+
+    #endregion Fields - Generated Do not Modify!
+
+    #region DateTime Fields - Generated Do not Modify!
+{{DateTimeFields}}{{NullableDateTimeFields}}
+
+    #endregion DateTime Fields - Generated Do not Modify!
+
+    #region CsLongString Fields - Generated Do not Modify!
+{{CsLongStringFields}}
+
+    #endregion CsLongString Fields - Generated Do not Modify!
+
+    #region Static Properties - Generated Do not Modify!
+
+    public static CsDatabaseEnum StaticDefaultTargetPersistenceCsDatabaseEnum
+    {
+      get
+      {
+        return CsDatabaseEnum.{{DefaultTargetPersistenceCsDatabaseEnum}};
+      }
+    }
+    
+    public static bool StaticIsCacheSupported
+    {
+      get
+      {
+        return {{IsCacheSupported}};
+      }
+    }
+    
+    public static double StaticCacheExpiryMinutes
+    {
+      get
+      {
+        return {{CacheExpiryMinutes}};
+      }
+    }
+    
+    public static bool StaticIsZeroResultsCacheAllowed
+    {
+      get
+      {
+        return {{IsZeroResultsCacheAllowed}};
+      }
+    }
+
+    #endregion Static Properties - Generated Do not Modify!
+
+    #region Properties - Generated Do not Modify!
+{{Properties}}
+
+    #endregion Properties - Generated Do not Modify!
+
+    #region Selected Properties - Generated Do not Modify!
+{{Selected Properties}}
+
+    #endregion Selected Properties - Generated Do not Modify!
+
+    #region DateTime Properties - Generated Do not Modify!
+{{DateTimeProperties}}{{NullableDateTimeProperties}}
+
+    #endregion DateTime Properties - Generated Do not Modify!
+
+    #region CsLongString Properties - Generated Do not Modify!
+{{CsLongStringProperties}}
+
+    #endregion CsLongString Properties - Generated Do not Modify!
+
+    #region Constructors - Generated Do not Modify!
+
+    public {{Code}}()
+    {
+      //Just to have public parameter-less constructor
+    }
+
+    #endregion Constructors - Generated Do not Modify!
+
+    #region Methods - Generated Do not Modify!
+    
+    public override CsDatabaseEnum GetDefaultTargetPersistenceCsDatabaseEnum()
+    {
+      var csDeviceDataSyncRecord = this as ICsDeviceDataSyncRecord;
+
+      if (csDeviceDataSyncRecord == null)
+      {
+        return {{Code}}.StaticDefaultTargetPersistenceCsDatabaseEnum;
+      }
+      else
+      {
+        return csDeviceDataSyncRecord.TargetCsDatabaseEnum;
+      }
+    }
+  
+    public override bool GetStaticIsCacheSupported()
+    {
+      return {{Code}}.StaticIsCacheSupported;
+    }
+  
+    public override double GetStaticCacheExpiryMinutes()
+    {
+      return {{Code}}.StaticCacheExpiryMinutes;
+    }
+  
+    public override bool GetStaticIsZeroResultsCacheAllowed()
+    {
+      return {{Code}}.StaticIsZeroResultsCacheAllowed;
+    }
+
+    #endregion Methods - Generated Do not Modify!
+  }
+}

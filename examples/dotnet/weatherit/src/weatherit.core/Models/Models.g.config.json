@@ -1,0 +1,456 @@
+﻿{
+  "CodeGenFiles": [
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.g.cs.template",
+      "CodeGenOutputFileName": "{{Code}}.g.cs",
+      "CodeGenFrequencyEnum": "Always",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "CsConcept",
+      "DataColumnName": "{{|*|}}",
+      "ParentFilterColumnName": "Code",
+      "CodeGenFileFields": [
+        {
+          "CodeGenTypeEnum": "ForEach",
+          "Find": "{{Fields}}",
+          "CodeGenFileFieldReplace": {
+            "CodeGenReplaceTypeEnum": "Lookup",
+            "CodeSnippet": [
+              "    ",
+              "    private {{AspectCodeDataType}} _{{AspectName}} = {{DefaultValue}};"
+            ],
+            "DataTableName": "CsConceptAspect",
+            "DataColumnName": "{{|*|}}",
+            "TransformForeignKeyIdToCode": "false",
+            "ChildFilterColumnName": "ParentCsConceptCode",
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "IsInherited",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "false"
+              },
+              {
+                "FilterColumnName": "AspectParameterDataType",
+                "FilterColumnComparisonOperator": "NotEquals",
+                "FilterColumnValue": "DateTime"
+              },
+              {
+                "FilterColumnName": "AspectParameterDataType",
+                "FilterColumnComparisonOperator": "NotEquals",
+                "FilterColumnValue": "DateTime?"
+              },
+              {
+                "FilterColumnName": "AspectParameterDataType",
+                "FilterColumnComparisonOperator": "NotEquals",
+                "FilterColumnValue": "CsLongString"
+              }
+            ]
+          }
+        },
+        {
+          "CodeGenTypeEnum": "ForEach",
+          "Find": "{{DateTimeFields}}",
+          "CodeGenFileFieldReplace": {
+            "CodeGenReplaceTypeEnum": "Lookup",
+            "CodeSnippet": [
+              "    ",
+              "    private {{AspectCodeDataType}} _{{AspectName}} = DateTime.MinValue;",
+              "    private {{AspectCodeDataType}} _{{AspectName}}Lt = DateTime.MinValue;"
+            ],
+            "DataTableName": "CsConceptAspect",
+            "DataColumnName": "{{|*|}}",
+            "TransformForeignKeyIdToCode": "false",
+            "ChildFilterColumnName": "ParentCsConceptCode",
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "IsInherited",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "false"
+              },
+              {
+                "FilterColumnName": "AspectParameterDataType",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "DateTime"
+              }
+            ]
+          }
+        },
+        {
+          "CodeGenTypeEnum": "ForEach",
+          "Find": "{{CsLongStringFields}}",
+          "CodeGenFileFieldReplace": {
+            "CodeGenReplaceTypeEnum": "Lookup",
+            "CodeSnippet": [
+              "    ",
+              "    private {{AspectCodeDataType}} _{{AspectName}}_AsCsLongString = new CsLongString();"
+            ],
+            "DataTableName": "CsConceptAspect",
+            "DataColumnName": "{{|*|}}",
+            "TransformForeignKeyIdToCode": "false",
+            "ChildFilterColumnName": "ParentCsConceptCode",
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "IsInherited",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "false"
+              },
+              {
+                "FilterColumnName": "AspectParameterDataType",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "CsLongString"
+              }
+            ]
+          }
+        },
+        {
+          "CodeGenTypeEnum": "ForEach",
+          "Find": "{{NullableDateTimeFields}}",
+          "CodeGenFileFieldReplace": {
+            "CodeGenReplaceTypeEnum": "Lookup",
+            "CodeSnippet": [
+              "    ",
+              "    private {{AspectCodeDataType}} _{{AspectName}} = null;",
+              "    private {{AspectCodeDataType}} _{{AspectName}}Lt = null;"
+            ],
+            "DataTableName": "CsConceptAspect",
+            "DataColumnName": "{{|*|}}",
+            "TransformForeignKeyIdToCode": "false",
+            "ChildFilterColumnName": "ParentCsConceptCode",
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "IsInherited",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "false"
+              },
+              {
+                "FilterColumnName": "AspectParameterDataType",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "DateTime?"
+              }
+            ]
+          }
+        },
+        {
+          "CodeGenTypeEnum": "ForEach",
+          "Find": "{{Properties}}",
+          "CodeGenFileFieldReplace": {
+            "CodeGenReplaceTypeEnum": "Lookup",
+            "CodeSnippet": [
+              "    ",
+              "    public {{AspectCodeDataType}} {{AspectName}}",
+              "    {",
+              "      get",
+              "      {",
+              "        return _{{AspectName}};",
+              "      }",
+              "      set",
+              "      {",
+              "        SetProperty(ref _{{AspectName}}, value);",
+              "      }",
+              "    }"
+            ],
+            "DataTableName": "CsConceptAspect",
+            "DataColumnName": "{{|*|}}",
+            "TransformForeignKeyIdToCode": "false",
+            "ChildFilterColumnName": "ParentCsConceptCode",
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "IsInherited",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "false"
+              },
+              {
+                "FilterColumnName": "AspectParameterDataType",
+                "FilterColumnComparisonOperator": "NotEquals",
+                "FilterColumnValue": "DateTime"
+              },
+              {
+                "FilterColumnName": "AspectParameterDataType",
+                "FilterColumnComparisonOperator": "NotEquals",
+                "FilterColumnValue": "DateTime?"
+              },
+              {
+                "FilterColumnName": "AspectParameterDataType",
+                "FilterColumnComparisonOperator": "NotEquals",
+                "FilterColumnValue": "CsLongString"
+              }
+            ]
+          }
+        },
+        {
+          "CodeGenTypeEnum": "ForEach",
+          "Find": "{{DateTimeProperties}}",
+          "CodeGenFileFieldReplace": {
+            "CodeGenReplaceTypeEnum": "Lookup",
+            "CodeSnippet": [
+              "    ",
+              "    public {{AspectCodeDataType}} {{AspectName}}",
+              "    {",
+              "      get",
+              "      {",
+              "        return _{{AspectName}};",
+              "      }",
+              "      set",
+              "      {",
+              "        if (!_{{AspectName}}.Equals(value))",
+              "        {",
+              "          SetProperty(ref _{{AspectName}}, value);",
+              "        }",
+              "        if (!this._{{AspectName}}Lt.Equals(_{{AspectName}}.FromUtcToSpecificTimeZone(this.UiTimeZoneInfo)))",
+              "        {",
+              "           this._{{AspectName}}Lt = _{{AspectName}}.FromUtcToSpecificTimeZone(this.UiTimeZoneInfo);",
+              "        }",
+              "      }",
+              "    }",
+              "    ",
+              "    [CsServerIgnoreForPersistence]",
+              "    [CsClientIgnoreForPersistence]",
+              "    [JsonIgnore]",
+              "    public {{AspectCodeDataType}} {{AspectName}}Lt",
+              "    {",
+              "      get",
+              "      {",
+              "        return _{{AspectName}}Lt;",
+              "      }",
+              "      set",
+              "      {",
+              "        if (!_{{AspectName}}Lt.Equals(value))",
+              "        {",
+              "          SetProperty(ref _{{AspectName}}Lt, value);",
+              "        }",
+              "        if (!_{{AspectName}}.Equals(_{{AspectName}}Lt.FromSpecificTimeZoneToUtc(this.UiTimeZoneInfo)))",
+              "        {",
+              "          this._{{AspectName}} = _{{AspectName}}Lt.FromSpecificTimeZoneToUtc(this.UiTimeZoneInfo);",
+              "        }",
+              "      }",
+              "    }",
+              "    ",
+              "    [CsServerIgnoreForPersistence]",
+              "    [CsClientIgnoreForPersistence]",
+              "    [JsonIgnore]",
+              "    public string {{AspectName}}LtDescribed",
+              "    {",
+              "      get",
+              "      {",
+              "        return _{{AspectName}}Lt.ToLongDateString() + \" \" + this.{{AspectName}}Lt.ToLongTimeString();",
+              "      }",
+              "    }",
+              "    ",
+              "    [CsServerIgnoreForPersistence]",
+              "    [CsClientIgnoreForPersistence]",
+              "    [JsonIgnore]",
+              "    public TimeSpan {{AspectName}}LtTimeSpan",
+              "    {",
+              "      get",
+              "      {",
+              "        return _{{AspectName}}Lt.TimeOfDay;",
+              "      }",
+              "    }"
+            ],
+            "DataTableName": "CsConceptAspect",
+            "DataColumnName": "{{|*|}}",
+            "TransformForeignKeyIdToCode": "false",
+            "ChildFilterColumnName": "ParentCsConceptCode",
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "IsInherited",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "false"
+              },
+              {
+                "FilterColumnName": "AspectParameterDataType",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "DateTime"
+              }
+            ]
+          }
+        },
+        {
+          "CodeGenTypeEnum": "ForEach",
+          "Find": "{{NullableDateTimeProperties}}",
+          "CodeGenFileFieldReplace": {
+            "CodeGenReplaceTypeEnum": "Lookup",
+            "CodeSnippet": [
+              "    ",
+              "    public {{AspectCodeDataType}} {{AspectName}}",
+              "    {",
+              "      get",
+              "      {",
+              "        return _{{AspectName}};",
+              "      }",
+              "      set",
+              "      {",
+              "        if (!(_{{AspectName}}?.Equals(value) ?? false))",
+              "        {",
+              "          SetProperty(ref _{{AspectName}}, value);",
+              "        }",
+              "        if (!(this.{{AspectName}}Lt?.Equals({{AspectName}}?.FromUtcToSpecificTimeZone(this.UiTimeZoneInfo)) ?? false))",
+              "        {",
+              "           this.{{AspectName}}Lt = _{{AspectName}}?.FromUtcToSpecificTimeZone(this.UiTimeZoneInfo);",
+              "        }",
+              "      }",
+              "    }",
+              "    ",
+              "    [CsServerIgnoreForPersistence]",
+              "    [CsClientIgnoreForPersistence]",
+              "    [JsonIgnore]",
+              "    public {{AspectCodeDataType}} {{AspectName}}Lt",
+              "    {",
+              "      get",
+              "      {",
+              "        return _{{AspectName}}Lt;",
+              "      }",
+              "      set",
+              "      {",
+              "        if (!(_{{AspectName}}Lt?.Equals(value) ?? false))",
+              "        {",
+              "          SetProperty(ref _{{AspectName}}Lt, value);",
+              "        }",
+              "        if (!({{AspectName}}?.Equals(_{{AspectName}}Lt?.FromSpecificTimeZoneToUtc(this.UiTimeZoneInfo)) ?? false))",
+              "        {",
+              "          this.{{AspectName}} = _{{AspectName}}Lt?.FromSpecificTimeZoneToUtc(this.UiTimeZoneInfo);",
+              "        }",
+              "      }",
+              "    }",
+              "    ",
+              "    [CsServerIgnoreForPersistence]",
+              "    [CsClientIgnoreForPersistence]",
+              "    [JsonIgnore]",
+              "    public string {{AspectName}}LtDescribed",
+              "    {",
+              "      get",
+              "      {",
+              "        string result = string.Empty;",
+              "        if (_{{AspectName}}Lt != null)",
+              "        {",
+              "          result = _{{AspectName}}Lt?.ToLongDateString() + \" \" + this.{{AspectName}}Lt?.ToLongTimeString();",
+              "        }",
+              "        return result;",
+              "      }",
+              "    }",
+              "    ",
+              "    [CsServerIgnoreForPersistence]",
+              "    [CsClientIgnoreForPersistence]",
+              "    [JsonIgnore]",
+              "    public TimeSpan? {{AspectName}}LtTimeSpan",
+              "    {",
+              "      get",
+              "      {",
+              "        return _{{AspectName}}Lt?.TimeOfDay;",
+              "      }",
+              "    }"
+            ],
+            "DataTableName": "CsConceptAspect",
+            "DataColumnName": "{{|*|}}",
+            "TransformForeignKeyIdToCode": "false",
+            "ChildFilterColumnName": "ParentCsConceptCode",
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "IsInherited",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "false"
+              },
+              {
+                "FilterColumnName": "AspectParameterDataType",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "DateTime?"
+              }
+            ]
+          }
+        },
+        {
+          "CodeGenTypeEnum": "ForEach",
+          "Find": "{{CsLongStringProperties}}",
+          "CodeGenFileFieldReplace": {
+            "CodeGenReplaceTypeEnum": "Lookup",
+            "CodeSnippet": [
+              "    ",
+              "    [CsClientIgnoreForPersistence]",
+              "    public {{AspectCodeDataType}} {{AspectName}}_As{{AspectCodeDataType}}",
+              "    {",
+              "      get",
+              "      {",
+              "        return _{{AspectName}}_As{{AspectCodeDataType}};",
+              "      }",
+              "      set",
+              "      {",
+              "        if (!_{{AspectName}}_As{{AspectCodeDataType}}.Equals(value))",
+              "        {",
+              "          SetProperty(ref _{{AspectName}}_As{{AspectCodeDataType}}, value);",
+              "        }",
+              "      }",
+              "    }",
+              "    ",
+              "    [CsServerIgnoreForPersistence]",
+              "    public string {{AspectName}}",
+              "    {",
+              "      get",
+              "      {",
+              "        return _{{AspectName}}_As{{AspectCodeDataType}}.Value;",
+              "      }",
+              "      set",
+              "      {",
+              "        _{{AspectName}}_As{{AspectCodeDataType}}.Value = value;",
+              "      }",
+              "    }"
+            ],
+            "DataTableName": "CsConceptAspect",
+            "DataColumnName": "{{|*|}}",
+            "TransformForeignKeyIdToCode": "false",
+            "ChildFilterColumnName": "ParentCsConceptCode",
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "IsInherited",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "false"
+              },
+              {
+                "FilterColumnName": "AspectParameterDataType",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "CsLongString"
+              }
+            ]
+          }
+        },
+        {
+          "CodeGenTypeEnum": "ForEach",
+          "Find": "{{Selected Properties}}",
+          "CodeGenFileFieldReplace": {
+            "CodeGenReplaceTypeEnum": "Lookup",
+            "CodeSnippet": [
+              "    ",
+              "    [CsServerIgnoreForPersistence]",
+              "    [CsClientIgnoreForPersistence]",
+              "    public {{RelatedCsConceptCode}} Selected_{{AspectName}}_{{RelatedCsConceptCode}}",
+              "    {",
+              "      get;",
+              "      set;",
+              "    }"
+            ],
+            "DataTableName": "CsConceptAspect",
+            "DataColumnName": "{{|*|}}",
+            "TransformForeignKeyIdToCode": "false",
+            "ChildFilterColumnName": "ParentCsConceptCode",
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "CsConceptAspectTypeCode",
+                "FilterColumnComparisonOperator": "StartsWith",
+                "FilterColumnValue": "CsConceptAspectForeignKey"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.cs.template",
+      "CodeGenOutputFileName": "{{Code}}.cs",
+      "CodeGenFrequencyEnum": "IfDoesNotExist",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "CsConcept",
+      "DataColumnName": "{{|*|}}",
+      "CodeGenFileFields": []
+    }
+  ]
+}
