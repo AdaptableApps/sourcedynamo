@@ -23,7 +23,7 @@ public class WeatherForecastController : ControllerBase
   }
 
   [HttpGet(Name = "GetWeatherForecast")]
-  public GetWeatherForecastResponse Get()
+  public string Get()
   {
     var weatherForecastsArray = Enumerable.Range(1, 5).Select(index => new WeatherForecast
     {
@@ -37,6 +37,8 @@ public class WeatherForecastController : ControllerBase
       WeatherForecasts = weatherForecastsArray
     };
 
-    return getWeatherForecastResponse;
+     var getWeatherForecastResponseString = JsonSerializer.Serialize<GetWeatherForecastResponse>(getWeatherForecastResponse, JsonSerializerOptions.Default);
+
+     return getWeatherForecastResponseString;
   }
 }
