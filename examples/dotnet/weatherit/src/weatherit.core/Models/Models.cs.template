@@ -1,21 +1,12 @@
-﻿using System;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
-using aa.cs.core.net;
-using aa.cs.shared.net.Attributes;
-using aa.cs.core.net.Types;
-using aa.cs.core.net.Interfaces;
+﻿namespace weatherit.core.Models;
 
-namespace aa.cs.core.net.Models
+public partial class {{ModelCode}}
 {
-  public partial class {{Code}}
-  {
-    #region Properties
+  #region Properties
 
-    #endregion Properties
+  #endregion Properties
 
-    #region Methods
+  #region Methods
 
-    #endregion Methods
-  }
+  #endregion Methods
 }
