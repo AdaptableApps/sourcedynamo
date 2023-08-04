@@ -32,12 +32,12 @@ public class WeatherForecastController : ControllerBase
       Summary = Summaries[Random.Shared.Next(Summaries.Length)]
     }).ToArray();
     
-    var getWeatherForecastResponse = new GetWeatherForecastResponse()
-    {
-      WeatherForecasts = weatherForecastsArray
-    };
+    // var getWeatherForecastResponse = new GetWeatherForecastResponse()
+    // {
+    //   WeatherForecasts = weatherForecastsArray
+    // };
 
-     var getWeatherForecastResponseString = JsonSerializer.Serialize<GetWeatherForecastResponse>(getWeatherForecastResponse, JsonSerializerOptions.Default);
+     var getWeatherForecastResponseString = JsonSerializer.Serialize<WeatherForecast[]>(weatherForecastsArray, JsonSerializerOptions.Default);
 
      return getWeatherForecastResponseString;
   }

@@ -42,11 +42,13 @@ public partial class FetchData
       {
         var responseString = await httpResponseMessage.Content.ReadAsStringAsync();
 
-        var getWeatherForecastResponse = JsonSerializer.Deserialize<GetWeatherForecastResponse>(responseString, JsonSerializerOptions.Default);
+        // var getWeatherForecastResponse = JsonSerializer.Deserialize<GetWeatherForecastResponse>(responseString, JsonSerializerOptions.Default);
+        var weatherForecasts = JsonSerializer.Deserialize<WeatherForecast[]>(responseString, JsonSerializerOptions.Default);
 
-        if (getWeatherForecastResponse != null)
+        if (weatherForecasts != null)
         {
-          this._weatherForecasts = getWeatherForecastResponse.WeatherForecasts;
+          // this._weatherForecasts = getWeatherForecastResponse.WeatherForecasts;
+          this._weatherForecasts = weatherForecasts;
         }
 
         StateHasChanged();
