@@ -1,4 +1,8 @@
-﻿using System.Net;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -10,23 +14,24 @@ namespace weatherit.blazorwasm.Pages;
 
 public partial class FetchData
 {
-  private WeatherForecast[]? forecasts;
+  private WeatherForecast[]? _weatherForecasts;
 
   protected override async Task OnInitializedAsync()
   {
     try
     {
       var httpClient = new HttpClient() {BaseAddress = new Uri(CoreStatic.ServerBaseUrl)};
-      httpClient.DefaultRequestHeaders.Clear();
+      // httpClient.DefaultRequestHeaders.Clear();
       httpClient.DefaultRequestHeaders.Add("Origin", CoreStatic.ClientBaseUrl);
-
       httpClient.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", CoreStatic.ClientBaseUrl);
-      
-      var httpRequest = new HttpRequestMessage(HttpMethod.Get, "WeatherForecast");
-      httpRequest.Headers.Clear();
+
+      var httpRequestUri = new Uri(Path.Combine(CoreStatic.ServerBaseUrl, "WeatherForecast"));
+      Console.WriteLine(httpRequestUri.ToString());
+
+      var httpRequest = new HttpRequestMessage(HttpMethod.Get, httpRequestUri);
+      // httpRequest.Headers.Clear();
       httpRequest.SetBrowserRequestMode(BrowserRequestMode.Cors);
       httpRequest.Headers.Add("Origin", CoreStatic.ClientBaseUrl);
-
       httpRequest.Headers.Add("Access-Control-Allow-Origin", CoreStatic.ClientBaseUrl);
 
       var httpResponseMessage = await httpClient.SendAsync(httpRequest);
@@ -37,11 +42,18 @@ public partial class FetchData
       {
         var responseString = await httpResponseMessage.Content.ReadAsStringAsync();
 
-        forecasts = JsonSerializer.Deserialize<WeatherForecast[]>(responseString);
+        var getWeatherForecastResponse = JsonSerializer.Deserialize<GetWeatherForecastResponse>(responseString, JsonSerializerOptions.Default);
+
+        if (getWeatherForecastResponse != null)
+        {
+          this._weatherForecasts = getWeatherForecastResponse.WeatherForecasts;
+        }
+
+        StateHasChanged();
       } //if
       else
       {
-        throw new Exception("Http Error " + httpResponseMessage.StatusCode + ", Reason: " + httpResponseMessage.ReasonPhrase);
+        Console.WriteLine("Http Error " + httpResponseMessage.StatusCode + ", Reason: " + httpResponseMessage.ReasonPhrase);
       } //else
     } //try
     catch (Exception exception)
