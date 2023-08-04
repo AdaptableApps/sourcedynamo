@@ -25,14 +25,18 @@ public class WeatherForecastController : ControllerBase
   [HttpGet(Name = "GetWeatherForecast")]
   public GetWeatherForecastResponse Get()
   {
-    return new GetWeatherForecastResponse()
+    var weatherForecastsArray = Enumerable.Range(1, 5).Select(index => new WeatherForecast
     {
-      WeatherForecasts = Enumerable.Range(1, 5).Select(index => new WeatherForecast
-      {
-        Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-        TemperatureC = Random.Shared.Next(-20, 55),
-        Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-      }).ToArray()
+      Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+      TemperatureC = Random.Shared.Next(-20, 55),
+      Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+    }).ToArray();
+    
+    var getWeatherForecastResponse = new GetWeatherForecastResponse()
+    {
+      WeatherForecasts = weatherForecastsArray
     };
+
+    return getWeatherForecastResponse;
   }
 }
