@@ -25,7 +25,7 @@ if ($ValidData)
   Write-Host ""
   Write-Host "Parameter 2 (WI Release Version Number Padded File Name Friendly) : $WI_RELEASE_VERSION_NUMBER_PADDED_FILE_NAME_FRIENDLY"
 
-  $WI_CODEGEN_DATA_FILE = "$Env:WI_ROOT\src\aa.cs.code.gen\Data\wi.code.gen.data_WeatherIt_$WI_RELEASE_VERSION_NUMBER_PADDED_FILE_NAME_FRIENDLY.xlsx"
+  $WI_CODEGEN_DATA_FILE = "$WI_ROOT_PATH/src/weatherit.code.gen/Data/wi.code.gen_WeatherIt_$WI_RELEASE_VERSION_NUMBER_PADDED_FILE_NAME_FRIENDLY.xlsx"
 
   Write-Host ""
 
@@ -33,6 +33,6 @@ if ($ValidData)
 
   Write-Host ""
 
-  Write-Host sourcedynamo action = codegen codegendatafile = "$WI_CODEGEN_DATA_FILE" productrootpath = "$WI_ROOT_PATH"
-  sourcedynamo action = codegen codegendatafile = "$WI_CODEGEN_DATA_FILE" productrootpath = "$WI_ROOT_PATH"
+  Write-Host sourcedynamo action=codegen codegendatafile="$WI_CODEGEN_DATA_FILE" productrootpath = "$WI_ROOT_PATH"
+  sourcedynamo action=codegen codegendatafile="$WI_CODEGEN_DATA_FILE" productrootpath = "$WI_ROOT_PATH"
 }
