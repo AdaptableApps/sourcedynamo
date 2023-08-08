@@ -8,6 +8,13 @@
       "CodeGenDataSourceEnum": "ExcelFile",
       "DataTableName": "Model",
       "DataColumnName": "{{|*|}}",
+      "CodeGenAdditionalColumnFilters": [
+        {
+          "FilterColumnName": "HasController",
+          "FilterColumnComparisonOperator": "Equals",
+          "FilterColumnValue": "true"
+        }
+      ],
       "CodeGenFileFields": []
     },
     {
@@ -18,6 +25,13 @@
       "CodeGenDataSourceEnum": "ExcelFile",
       "DataTableName": "Model",
       "DataColumnName": "{{|*|}}",
+      "CodeGenAdditionalColumnFilters": [
+        {
+          "FilterColumnName": "HasController",
+          "FilterColumnComparisonOperator": "Equals",
+          "FilterColumnValue": "true"
+        }
+      ],
       "CodeGenFileFields": []
     }
   ]

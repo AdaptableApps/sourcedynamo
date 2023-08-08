@@ -8,7 +8,7 @@
       "CodeGenDataSourceEnum": "ExcelFile",
       "DataTableName": "Model",
       "DataColumnName": "{{|*|}}",
-      "ParentFilterColumnName": "Id",
+      "ParentFilterColumnName": "ModelCode",
       "CodeGenFileFields": [
         {
           "CodeGenTypeEnum": "ForEach",
@@ -20,7 +20,14 @@
             ],
             "DataTableName": "Model",
             "DataColumnName": "{{|*|}}",
-            "ChildFilterColumnName": "Id"
+            "ChildFilterColumnName": "ModelCode",
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "HasView",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "true"
+              }
+            ]
           }
         }
       ]
@@ -33,7 +40,7 @@
       "CodeGenDataSourceEnum": "ExcelFile",
       "DataTableName": "Model",
       "DataColumnName": "{{|*|}}",
-      "ParentFilterColumnName": "Id",
+      "ParentFilterColumnName": "ModelCode",
       "CodeGenFileFields": [
         {
           "CodeGenTypeEnum": "ForEach",
@@ -45,7 +52,14 @@
             ],
             "DataTableName": "Model",
             "DataColumnName": "{{|*|}}",
-            "ChildFilterColumnName": "Id"
+            "ChildFilterColumnName": "ModelCode",
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "HasView",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "true"
+              }
+            ]
           }
         }
       ]
