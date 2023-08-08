@@ -31,7 +31,7 @@ public partial class WeatherForecastMultipleViewModel
 
   public async Task InitAsync()
   {
-    _ModelArray = await ClientServiceHelperStatic.GetMultiple<WeatherForecast>();
+    _ModelArray = await ClientServiceHelperStatic.GetMultiple<WeatherForecast>(nameof(WeatherForecast));
   }
  
   #endregion Methods

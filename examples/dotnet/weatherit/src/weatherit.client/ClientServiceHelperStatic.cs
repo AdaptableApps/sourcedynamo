@@ -12,7 +12,7 @@ public static class ClientServiceHelperStatic
 {
   #region Methods
   
-  public static async Task<T[]?> GetMultiple<T>()
+  public static async Task<T[]?> GetMultiple<T>(string endpointName)
   {
     T[]? results = null;
     
@@ -24,7 +24,7 @@ public static class ClientServiceHelperStatic
       httpClient.DefaultRequestHeaders.Add("Origin", CoreStatic.ClientBaseUrl);
       httpClient.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", CoreStatic.ClientBaseUrl);
 
-      var httpRequestUri = new Uri(Path.Combine(CoreStatic.ServerBaseUrl, "WeatherForecast"));
+      var httpRequestUri = new Uri(Path.Combine(CoreStatic.ServerBaseUrl, endpointName));
       Console.WriteLine(httpRequestUri.ToString());
 
       var httpRequest = new HttpRequestMessage(HttpMethod.Get, httpRequestUri);

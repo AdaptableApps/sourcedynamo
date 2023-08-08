@@ -31,7 +31,7 @@ public partial class {{ModelCode}}MultipleViewModel
 
   public async Task InitAsync()
   {
-    _ModelArray = await ClientServiceHelperStatic.GetMultiple<{{ModelCode}}>();
+    _ModelArray = await ClientServiceHelperStatic.GetMultiple<{{ModelCode}}>(nameof({{ModelCode}}));
   }
  
   #endregion Methods
