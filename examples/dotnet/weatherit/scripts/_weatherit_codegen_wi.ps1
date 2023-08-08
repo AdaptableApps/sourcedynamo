@@ -27,12 +27,16 @@ if ($ValidData)
                                          
   $WI_CODEGEN_DATA_FILE = "$WI_ROOT_PATH/src/weatherit.code.gen/Data/wi.code.gen_WeatherIt_$WI_RELEASE_VERSION_NUMBER_PADDED_FILE_NAME_FRIENDLY.xlsx"
 
+  Set-Location $WI_ROOT_PATH
+  
   Write-Host ""
+  Write-Host "Cleaning out bin and obj and node_modules folders so there are no extraneous g.config.json files in there"
+  Get-ChildItem .\ -include bin,obj,node_modules -Recurse | foreach ($_) { remove-item $_.fullname -Force -Recurse }
 
+  Write-Host ""
   Write-Host "WI_CODEGEN_DATA_FILE = $WI_CODEGEN_DATA_FILE"
 
   Write-Host ""
-
   Write-Host sourcedynamo action=codegen codegendatafile="$WI_CODEGEN_DATA_FILE" productrootpath="$WI_ROOT_PATH"
   sourcedynamo action=codegen codegendatafile="$WI_CODEGEN_DATA_FILE" productrootpath="$WI_ROOT_PATH"
 }
