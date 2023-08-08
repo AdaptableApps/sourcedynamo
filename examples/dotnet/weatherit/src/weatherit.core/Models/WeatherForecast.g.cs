@@ -6,16 +6,31 @@
 
 namespace weatherit.core.Models;
 
-public partial class {{ModelCode}}
+public partial class WeatherForecast
 {
   #region Properties - Generated Do not Modify!
-{{Properties}}
+    
+    public DateOnly Date
+    {
+      get;
+      set;
+    }    
+    public int TemperatureC
+    {
+      get;
+      set;
+    }    
+    public string? Summary
+    {
+      get;
+      set;
+    }
 
   #endregion Properties - Generated Do not Modify!
 
   #region Constructors - Generated Do not Modify!
 
-  public {{ModelCode}}()
+  public WeatherForecast()
   {
     //Just to have public parameter-less constructor
   }
