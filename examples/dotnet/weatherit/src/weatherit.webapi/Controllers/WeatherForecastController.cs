@@ -7,7 +7,7 @@ namespace weatherit.webapi.Controllers;
 public partial class WeatherForecastController
 {
   #region Fields
-  
+
   private static readonly string[] Summaries = new[]
   {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -20,21 +20,17 @@ public partial class WeatherForecastController
   [HttpGet(Name = "GetWeatherForecast")]
   public string Get()
   {
-    var weatherForecastsArray = Enumerable.Range(1, 5).Select(index => new WeatherForecast
-    {
-      Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-      TemperatureC = Random.Shared.Next(-20, 55),
-      Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-    }).ToArray();
-    
-    // var getWeatherForecastResponse = new GetWeatherForecastResponse()
-    // {
-    //   WeatherForecasts = weatherForecastsArray
-    // };
+    var weatherForecastsArray = Enumerable.Range(1, 5)
+      .Select(index => new WeatherForecast
+      {
+        Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+        TemperatureC = Random.Shared.Next(-20, 55),
+        Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+      }).ToArray();
 
-     var getWeatherForecastResponseString = JsonSerializer.Serialize<WeatherForecast[]>(weatherForecastsArray, JsonSerializerOptions.Default);
+    var getWeatherForecastResponseString = JsonSerializer.Serialize(weatherForecastsArray, JsonSerializerOptions.Default);
 
-     return getWeatherForecastResponseString;
+    return getWeatherForecastResponseString;
   }
 
   #endregion Methods

@@ -1,0 +1,24 @@
+using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
+using weatherit.core.Models;
+
+namespace weatherit.client.ViewModels;
+
+public partial class {{ModelCode}}CsViewModelT
+{
+  #region Fields
+
+  #endregion Fields
+
+  #region Properties
+
+  #endregion Properties
+
+  #region Constructors
+
+  #endregion Constructors
+
+  #region Methods
+
+  #endregion Methods
+}
