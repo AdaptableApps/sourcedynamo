@@ -4,8 +4,7 @@ using weatherit.core.Models;
 
 namespace weatherit.webapi.Controllers;
 
-[Route("[controller]")]
-public class WeatherForecastController
+public partial class WeatherForecastController
 {
   #region Fields
   
