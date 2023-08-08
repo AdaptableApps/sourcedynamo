@@ -13,13 +13,13 @@ public partial class WeatherForecastMultipleViewModel
 {
   #region Fields
   
-  private WeatherForecast[] _WeatherForecastArray;
+  private WeatherForecast[] _ModelArray;
 
   #endregion Fields
 
   #region Properties
 
-  public WeatherForecast[] ModelArray => _WeatherForecastArray;
+  public WeatherForecast[] ModelArray => _ModelArray;
 
   #endregion Properties
   
@@ -31,8 +31,7 @@ public partial class WeatherForecastMultipleViewModel
 
   public async Task InitAsync()
   {
-    WeatherForecast[] modelArray = await ClientServiceHelperStatic.GetMultiple<WeatherForecast>();
-    _WeatherForecastArray = modelArray;
+    _ModelArray = await ClientServiceHelperStatic.GetMultiple<WeatherForecast>();
   }
  
   #endregion Methods
