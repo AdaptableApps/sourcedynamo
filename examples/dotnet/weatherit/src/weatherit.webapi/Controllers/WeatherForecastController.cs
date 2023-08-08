@@ -1,26 +1,22 @@
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 using weatherit.core.Models;
 
 namespace weatherit.webapi.Controllers;
 
-// [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class WeatherForecastController
 {
+  #region Fields
+  
   private static readonly string[] Summaries = new[]
   {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
   };
 
-  private readonly ILogger<WeatherForecastController> _logger;
+  #endregion Fields
 
-  public WeatherForecastController(ILogger<WeatherForecastController> logger)
-  {
-    _logger = logger;
-  }
+  #region Methods
 
   [HttpGet(Name = "GetWeatherForecast")]
   public string Get()
@@ -41,4 +37,6 @@ public class WeatherForecastController : ControllerBase
 
      return getWeatherForecastResponseString;
   }
+
+  #endregion Methods
 }

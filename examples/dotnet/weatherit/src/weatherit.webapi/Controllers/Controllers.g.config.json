@@ -1,0 +1,24 @@
+﻿{
+  "CodeGenFiles": [
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.g.cs.template",
+      "CodeGenOutputFileName": "{{ModelCode}}Controller.g.cs",
+      "CodeGenFrequencyEnum": "Always",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "Model",
+      "DataColumnName": "{{|*|}}",
+      "CodeGenFileFields": []
+    },
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.cs.template",
+      "CodeGenOutputFileName": "{{ModelCode}}Controller.cs",
+      "CodeGenFrequencyEnum": "IfDoesNotExist",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "Model",
+      "DataColumnName": "{{|*|}}",
+      "CodeGenFileFields": []
+    }
+  ]
+}
