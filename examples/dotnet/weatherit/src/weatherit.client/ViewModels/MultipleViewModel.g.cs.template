@@ -1,0 +1,38 @@
+/*
+ *
+ * Generated Class - Do not Modify!
+ *
+ */
+
+using weatherit.core.Models;
+
+namespace weatherit.client.ViewModels;
+
+public partial class {{ModelCode}}MultipleViewModel
+{
+  #region Fields
+  
+  private {{ModelCode}}[] _{{ModelCode}}Array;
+
+  #endregion Fields
+
+  #region Properties
+
+  protected {{ModelCode}}[] ModelArray => _{{ModelCode}}Array;
+
+  #endregion Properties
+  
+  #region Constructors
+
+  #endregion Constructors
+
+  #region Methods
+
+  public async Task InitAsync()
+  {
+    {{ModelCode}}[] modelArray = await ClientServiceHelperStatic.GetMultiple<{{ModelCode}}>()
+    _{{ModelCode}}Array = modelArray;
+  }
+ 
+  #endregion Methods
+}

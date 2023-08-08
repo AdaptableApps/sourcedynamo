@@ -10,4 +10,8 @@
     <Folder Include="ViewModels\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\weatherit.core\weatherit.core.csproj" />
+  </ItemGroup>
+
 </Project>

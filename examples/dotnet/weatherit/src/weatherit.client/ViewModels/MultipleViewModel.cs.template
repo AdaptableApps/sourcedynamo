@@ -2,7 +2,7 @@ using weatherit.core.Models;
 
 namespace weatherit.client.ViewModels;
 
-public partial class {{ModelCode}}ViewModel
+public partial class {{ModelCode}}MultipleViewModel
 {
   #region Fields
 

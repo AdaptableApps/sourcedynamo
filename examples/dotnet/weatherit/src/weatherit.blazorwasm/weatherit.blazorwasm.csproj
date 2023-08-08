@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\weatherit.client\weatherit.client.csproj" />
     <ProjectReference Include="..\weatherit.core\weatherit.core.csproj" />
   </ItemGroup>
 

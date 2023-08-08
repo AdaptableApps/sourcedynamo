@@ -1,8 +1,8 @@
-using weatherit.core.Models;
+﻿using weatherit.core.Models;
 
 namespace weatherit.client.ViewModels;
 
-public partial class {{ModelCode}}ViewModel
+public partial class WeatherForecastViewModel
 {
   #region Fields
 

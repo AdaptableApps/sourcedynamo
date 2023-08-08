@@ -1,4 +1,4 @@
-/*
+﻿/*
  *
  * Generated Class - Do not Modify!
  *
@@ -8,25 +8,25 @@ using weatherit.core.Models;
 
 namespace weatherit.client.ViewModels;
 
-public partial class {{ModelCode}}ViewModel
+public partial class WeatherForecastViewModel
 {
   #region Fields
   
-  private {{ModelCode}} _{{ModelCode}};
+  private WeatherForecast _WeatherForecast;
 
   #endregion Fields
 
   #region Properties
 
-  protected {{ModelCode}} Model => _{{ModelCode}};
+  protected WeatherForecast Model => _WeatherForecast;
 
   #endregion Properties
   
   #region Constructors
 
-  public {{ModelCode}}ViewModel({{ModelCode}} model)
+  public WeatherForecastViewModel(WeatherForecast model)
   {
-    _{{ModelCode}}= model;
+    _WeatherForecast= model;
   }
 
   #endregion Constructors
