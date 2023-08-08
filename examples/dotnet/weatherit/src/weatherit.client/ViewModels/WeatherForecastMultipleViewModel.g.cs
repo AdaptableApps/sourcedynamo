@@ -1,4 +1,4 @@
-/*
+﻿/*
  *
  * Generated Class - Do not Modify!
  *
@@ -9,17 +9,17 @@ using weatherit.core.Models;
 
 namespace weatherit.client.ViewModels;
 
-public partial class {{ModelCode}}MultipleViewModel
+public partial class WeatherForecastMultipleViewModel
 {
   #region Fields
   
-  private {{ModelCode}}[] _ModelArray;
+  private WeatherForecast[] _WeatherForecastArray;
 
   #endregion Fields
 
   #region Properties
 
-  public {{ModelCode}}[] ModelArray => _ModelArray;
+  public WeatherForecast[] ModelArray => _WeatherForecastArray;
 
   #endregion Properties
   
@@ -31,7 +31,8 @@ public partial class {{ModelCode}}MultipleViewModel
 
   public async Task InitAsync()
   {
-    _ModelArray = await ClientServiceHelperStatic.GetMultiple<{{ModelCode}}>();
+    WeatherForecast[] modelArray = await ClientServiceHelperStatic.GetMultiple<WeatherForecast>();
+    _WeatherForecastArray = modelArray;
   }
  
   #endregion Methods

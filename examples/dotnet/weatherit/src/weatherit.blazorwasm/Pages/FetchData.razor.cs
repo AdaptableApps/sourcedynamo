@@ -7,6 +7,7 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
+using weatherit.client.ViewModels;
 using weatherit.core;
 using weatherit.core.Models;
 
@@ -14,14 +15,13 @@ namespace weatherit.blazorwasm.Pages;
 
 public partial class FetchData
 {
-  private WeatherForecastMultipleViewModel _WeatherForecastMultipleViewModel;
+  private WeatherForecastMultipleViewModel _MultipleViewModel = new();
 
   protected override async Task OnInitializedAsync()
   {
     try
     {
-      _WeatherForecastMultipleViewModel = new WeatherForecastMultipleViewModel();
-      await _WeatherForecastMultipleViewModel.InitAsync();
+      await _MultipleViewModel.InitAsync();
     } //try
     catch (Exception exception)
     {

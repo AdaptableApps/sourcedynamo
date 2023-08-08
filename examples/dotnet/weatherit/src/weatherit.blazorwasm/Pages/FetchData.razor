@@ -7,7 +7,7 @@
 
 <p>This component demonstrates fetching data from the server.</p>
 
-@if ((_weatherForecasts == null) || (!_weatherForecasts.Any()))
+@if ((_MultipleViewModel.ModelArray == null) || (!_MultipleViewModel.ModelArray.Any()))
 {
     <p><em>Loading...</em></p>
 }
@@ -23,7 +23,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in _weatherForecasts)
+            @foreach (var forecast in _MultipleViewModel.ModelArray)
             {
                 <tr>
                     <td>@forecast.Date.ToShortDateString()</td>
