@@ -2,8 +2,7 @@
 using System.Text.Json;
 using weatherit.core.Models;
 
-namespace weatherit.webapi.Controllers;
-
+namespace weatherit.webapi.Controllers
 public partial class {{ModelCode}}Controller
 {
   #region Properties
