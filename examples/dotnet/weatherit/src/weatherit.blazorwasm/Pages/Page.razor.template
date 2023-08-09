@@ -1,0 +1,28 @@
+﻿@page "/{{ModelCode}}"
+
+<PageTitle>{{MultipleDisplayName}}</PageTitle>
+
+<h1>{{MultipleDisplayName}}</h1>
+
+@if ((_MultipleViewModel.ModelArray == null) || (!_MultipleViewModel.ModelArray.Any()))
+{
+  <p><em>Loading...</em></p>
+}
+else
+{
+  <table class="table">
+    <thead>
+      <tr>
+{{Headings}}
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (var model in _MultipleViewModel.ModelArray)
+      {
+        <tr>
+{{Rows}}
+        </tr>
+      }
+    </tbody>
+  </table>
+}

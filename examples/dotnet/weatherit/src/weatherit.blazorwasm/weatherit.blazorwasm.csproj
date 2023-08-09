@@ -18,4 +18,14 @@
     <ProjectReference Include="..\weatherit.core\weatherit.core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Pages\Page.g.config.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Pages\Page.razor.template">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+  </ItemGroup>
+
 </Project>

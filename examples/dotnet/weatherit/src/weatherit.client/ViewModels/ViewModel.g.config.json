@@ -23,7 +23,7 @@
             "ChildFilterColumnName": "ModelCode",
             "CodeGenAdditionalColumnFilters": [
               {
-                "FilterColumnName": "HasView",
+                "FilterColumnName": "HasPage",
                 "FilterColumnComparisonOperator": "Equals",
                 "FilterColumnValue": "true"
               }
@@ -55,7 +55,7 @@
             "ChildFilterColumnName": "ModelCode",
             "CodeGenAdditionalColumnFilters": [
               {
-                "FilterColumnName": "HasView",
+                "FilterColumnName": "HasPage",
                 "FilterColumnComparisonOperator": "Equals",
                 "FilterColumnValue": "true"
               }

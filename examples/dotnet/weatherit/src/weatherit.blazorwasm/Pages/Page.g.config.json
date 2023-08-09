@@ -2,8 +2,30 @@
   "CodeGenFiles": [
     {
       "CodeGenTypeEnum": "ForEach",
-      "CodeGenTemplateFileName": "{{|RootFileName|}}.g.cs.template",
-      "CodeGenOutputFileName": "{{ModelCode}}MultipleViewModel.g.cs",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.g.razor.cs.template",
+      "CodeGenOutputFileName": "{{ModelCode}}Page.g.razor.cs",
+      "CodeGenFrequencyEnum": "Always",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "Model",
+      "DataColumnName": "{{|*|}}",
+      "CodeGenFileFields": []
+    },
+
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.razor.cs.template",
+      "CodeGenOutputFileName": "{{ModelCode}}Page.razor.cs",
+      "CodeGenFrequencyEnum": "IfDoesNotExist",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "Model",
+      "DataColumnName": "{{|*|}}",
+      "CodeGenFileFields": []
+    },
+    
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.g.razor.template",
+      "CodeGenOutputFileName": "{{ModelCode}}Page.g.razor",
       "CodeGenFrequencyEnum": "Always",
       "CodeGenDataSourceEnum": "ExcelFile",
       "DataTableName": "Model",
@@ -12,14 +34,16 @@
       "CodeGenFileFields": [
         {
           "CodeGenTypeEnum": "ForEach",
-          "Find": "{{ModelCode}}",
+          "Find": "{{Headings}}",
           "CodeGenFileFieldReplace": {
             "CodeGenReplaceTypeEnum": "Lookup",
             "CodeSnippet": [
-              "{{ModelCode}}"
+              "        ",
+              "        <th>{{DisplayName}}</th>"
             ],
-            "DataTableName": "Model",
+            "DataTableName": "ModelProperty",
             "DataColumnName": "{{|*|}}",
+            "TransformForeignKeyIdToCode": "false",
             "ChildFilterColumnName": "ModelCode",
             "CodeGenAdditionalColumnFilters": [
               {
@@ -29,29 +53,20 @@
               }
             ]
           }
-        }
-      ]
-    },
-    {
-      "CodeGenTypeEnum": "ForEach",
-      "CodeGenTemplateFileName": "{{|RootFileName|}}.cs.template",
-      "CodeGenOutputFileName": "{{ModelCode}}MultipleViewModel.cs",
-      "CodeGenFrequencyEnum": "IfDoesNotExist",
-      "CodeGenDataSourceEnum": "ExcelFile",
-      "DataTableName": "Model",
-      "DataColumnName": "{{|*|}}",
-      "ParentFilterColumnName": "ModelCode",
-      "CodeGenFileFields": [
+        },
+
         {
           "CodeGenTypeEnum": "ForEach",
-          "Find": "{{ModelCode}}",
+          "Find": "{{Rows}}",
           "CodeGenFileFieldReplace": {
             "CodeGenReplaceTypeEnum": "Lookup",
             "CodeSnippet": [
-              "{{ModelCode}}"
+              "    ",
+              "          <td>@model.{{ModelPropertyCode}}{{DisplayFormatExpression}}</td>"
             ],
-            "DataTableName": "Model",
+            "DataTableName": "ModelProperty",
             "DataColumnName": "{{|*|}}",
+            "TransformForeignKeyIdToCode": "false",
             "ChildFilterColumnName": "ModelCode",
             "CodeGenAdditionalColumnFilters": [
               {
