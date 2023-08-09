@@ -3,19 +3,11 @@
     {
       "CodeGenTypeEnum": "ForEach",
       "CodeGenTemplateFileName": "{{|RootFileName|}}.g.razor.template",
-      "CodeGenOutputFileName": "{{|RootFileName|}}.g.razor",
+      "CodeGenOutputFileName": "{{|RootFileName|}}.razor",
       "CodeGenFrequencyEnum": "Always",
       "CodeGenDataSourceEnum": "ExcelFile",
-      "DataTableName": "Model",
+      "DataTableName": "Config",
       "DataColumnName": "{{|*|}}",
-      "CodeGenAdditionalColumnFilters": [
-        {
-          "FilterColumnName": "HasPage",
-          "FilterColumnComparisonOperator": "Equals",
-          "FilterColumnValue": "true"
-        }
-      ],
-      "ParentFilterColumnName": "ModelCode",
       "CodeGenFileFields": [
         {
           "CodeGenTypeEnum": "ForEach",
@@ -32,8 +24,13 @@
             ],
             "DataTableName": "Model",
             "DataColumnName": "{{|*|}}",
-            "TransformForeignKeyIdToCode": "false",
-            "ChildFilterColumnName": "ModelCode"
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "HasPage",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "true"
+              }
+            ]
           }
         },
 
@@ -48,8 +45,13 @@
             ],
             "DataTableName": "ModelProperty",
             "DataColumnName": "{{|*|}}",
-            "TransformForeignKeyIdToCode": "false",
-            "ChildFilterColumnName": "ModelCode"
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "HasPage",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "true"
+              }
+            ]
           }
         }
       ]
