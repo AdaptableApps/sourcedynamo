@@ -5,11 +5,11 @@ using weatherit.client.ViewModels;
   
 namespace weatherit.blazorwasm.Pages;
 
-public partial class {{ModelCode}}Page : ComponentBase
+public partial class WeatherForecastBase: ComponentBase
 {
   #region Fields
   
-  private {{ModelCode}}MultipleViewModel _MultipleViewModel = new();
+  protected WeatherForecastMultipleViewModel _MultipleViewModel = new();
 
   #endregion Fields
 

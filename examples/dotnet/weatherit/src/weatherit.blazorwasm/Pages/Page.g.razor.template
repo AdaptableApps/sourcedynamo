@@ -1,4 +1,5 @@
 ﻿@page "/{{ModelCode}}"
+@inherits {{ModelCode}}Base
 
 <PageTitle>{{MultipleDisplayName}}</PageTitle>
 

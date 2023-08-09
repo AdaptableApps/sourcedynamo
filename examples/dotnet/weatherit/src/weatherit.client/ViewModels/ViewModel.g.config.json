@@ -8,6 +8,13 @@
       "CodeGenDataSourceEnum": "ExcelFile",
       "DataTableName": "Model",
       "DataColumnName": "{{|*|}}",
+      "CodeGenAdditionalColumnFilters": [
+        {
+          "FilterColumnName": "HasPage",
+          "FilterColumnComparisonOperator": "Equals",
+          "FilterColumnValue": "true"
+        }
+      ],
       "ParentFilterColumnName": "ModelCode",
       "CodeGenFileFields": [
         {
@@ -20,14 +27,7 @@
             ],
             "DataTableName": "Model",
             "DataColumnName": "{{|*|}}",
-            "ChildFilterColumnName": "ModelCode",
-            "CodeGenAdditionalColumnFilters": [
-              {
-                "FilterColumnName": "HasPage",
-                "FilterColumnComparisonOperator": "Equals",
-                "FilterColumnValue": "true"
-              }
-            ]
+            "ChildFilterColumnName": "ModelCode"
           }
         }
       ]
@@ -40,6 +40,13 @@
       "CodeGenDataSourceEnum": "ExcelFile",
       "DataTableName": "Model",
       "DataColumnName": "{{|*|}}",
+      "CodeGenAdditionalColumnFilters": [
+        {
+          "FilterColumnName": "HasPage",
+          "FilterColumnComparisonOperator": "Equals",
+          "FilterColumnValue": "true"
+        }
+      ],
       "ParentFilterColumnName": "ModelCode",
       "CodeGenFileFields": [
         {
@@ -52,14 +59,7 @@
             ],
             "DataTableName": "Model",
             "DataColumnName": "{{|*|}}",
-            "ChildFilterColumnName": "ModelCode",
-            "CodeGenAdditionalColumnFilters": [
-              {
-                "FilterColumnName": "HasPage",
-                "FilterColumnComparisonOperator": "Equals",
-                "FilterColumnValue": "true"
-              }
-            ]
+            "ChildFilterColumnName": "ModelCode"
           }
         }
       ]

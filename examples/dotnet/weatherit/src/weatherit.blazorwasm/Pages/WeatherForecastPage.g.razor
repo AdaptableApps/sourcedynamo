@@ -1,0 +1,37 @@
+﻿@page "/WeatherForecast"
+@inherits WeatherForecastBase
+
+<PageTitle>Weather Forecasts</PageTitle>
+
+<h1>Weather Forecasts</h1>
+
+@if ((_MultipleViewModel.ModelArray == null) || (!_MultipleViewModel.ModelArray.Any()))
+{
+  <p><em>Loading...</em></p>
+}
+else
+{
+  <table class="table">
+    <thead>
+      <tr>
+        
+        <th>Forecast Date</th>        
+        <th>Temp. (C)</th>        
+        <th>Temp. (F)</th>        
+        <th>Summary</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (var model in _MultipleViewModel.ModelArray)
+      {
+        <tr>
+    
+          <td>@model.Date.ToShortDateString()</td>    
+          <td>@model.TemperatureC</td>    
+          <td>@model.TemperatureF</td>    
+          <td>@model.Summary</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

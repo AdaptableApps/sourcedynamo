@@ -8,6 +8,13 @@
       "CodeGenDataSourceEnum": "ExcelFile",
       "DataTableName": "Model",
       "DataColumnName": "{{|*|}}",
+      "CodeGenAdditionalColumnFilters": [
+        {
+          "FilterColumnName": "HasPage",
+          "FilterColumnComparisonOperator": "Equals",
+          "FilterColumnValue": "true"
+        }
+      ],
       "ParentFilterColumnName": "ModelCode",
       "CodeGenFileFields": [
         {
@@ -22,14 +29,7 @@
             "DataTableName": "ModelProperty",
             "DataColumnName": "{{|*|}}",
             "TransformForeignKeyIdToCode": "false",
-            "ChildFilterColumnName": "ModelCode",
-            "CodeGenAdditionalColumnFilters": [
-              {
-                "FilterColumnName": "HasPage",
-                "FilterColumnComparisonOperator": "Equals",
-                "FilterColumnValue": "true"
-              }
-            ]
+            "ChildFilterColumnName": "ModelCode"
           }
         },
 
@@ -45,39 +45,10 @@
             "DataTableName": "ModelProperty",
             "DataColumnName": "{{|*|}}",
             "TransformForeignKeyIdToCode": "false",
-            "ChildFilterColumnName": "ModelCode",
-            "CodeGenAdditionalColumnFilters": [
-              {
-                "FilterColumnName": "HasPage",
-                "FilterColumnComparisonOperator": "Equals",
-                "FilterColumnValue": "true"
-              }
-            ]
+            "ChildFilterColumnName": "ModelCode"
           }
         }
       ]
-    },
-    
-    {
-      "CodeGenTypeEnum": "ForEach",
-      "CodeGenTemplateFileName": "{{|RootFileName|}}.g.razor.cs.template",
-      "CodeGenOutputFileName": "{{ModelCode}}Page.g.razor.cs",
-      "CodeGenFrequencyEnum": "Always",
-      "CodeGenDataSourceEnum": "ExcelFile",
-      "DataTableName": "Model",
-      "DataColumnName": "{{|*|}}",
-      "CodeGenFileFields": []
-    },
-
-    {
-      "CodeGenTypeEnum": "ForEach",
-      "CodeGenTemplateFileName": "{{|RootFileName|}}.razor.cs.template",
-      "CodeGenOutputFileName": "{{ModelCode}}Page.razor.cs",
-      "CodeGenFrequencyEnum": "IfDoesNotExist",
-      "CodeGenDataSourceEnum": "ExcelFile",
-      "DataTableName": "Model",
-      "DataColumnName": "{{|*|}}",
-      "CodeGenFileFields": []
     }
   ]
 }
