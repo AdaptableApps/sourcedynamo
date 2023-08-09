@@ -2,28 +2,6 @@
   "CodeGenFiles": [
     {
       "CodeGenTypeEnum": "ForEach",
-      "CodeGenTemplateFileName": "{{|RootFileName|}}.g.razor.cs.template",
-      "CodeGenOutputFileName": "{{ModelCode}}Page.g.razor.cs",
-      "CodeGenFrequencyEnum": "Always",
-      "CodeGenDataSourceEnum": "ExcelFile",
-      "DataTableName": "Model",
-      "DataColumnName": "{{|*|}}",
-      "CodeGenFileFields": []
-    },
-
-    {
-      "CodeGenTypeEnum": "ForEach",
-      "CodeGenTemplateFileName": "{{|RootFileName|}}.razor.cs.template",
-      "CodeGenOutputFileName": "{{ModelCode}}Page.razor.cs",
-      "CodeGenFrequencyEnum": "IfDoesNotExist",
-      "CodeGenDataSourceEnum": "ExcelFile",
-      "DataTableName": "Model",
-      "DataColumnName": "{{|*|}}",
-      "CodeGenFileFields": []
-    },
-    
-    {
-      "CodeGenTypeEnum": "ForEach",
       "CodeGenTemplateFileName": "{{|RootFileName|}}.g.razor.template",
       "CodeGenOutputFileName": "{{ModelCode}}Page.g.razor",
       "CodeGenFrequencyEnum": "Always",
@@ -78,6 +56,28 @@
           }
         }
       ]
+    },
+    
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.g.razor.cs.template",
+      "CodeGenOutputFileName": "{{ModelCode}}Page.g.razor.cs",
+      "CodeGenFrequencyEnum": "Always",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "Model",
+      "DataColumnName": "{{|*|}}",
+      "CodeGenFileFields": []
+    },
+
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.razor.cs.template",
+      "CodeGenOutputFileName": "{{ModelCode}}Page.razor.cs",
+      "CodeGenFrequencyEnum": "IfDoesNotExist",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "Model",
+      "DataColumnName": "{{|*|}}",
+      "CodeGenFileFields": []
     }
   ]
 }
