@@ -5,7 +5,7 @@ using weatherit.client.ViewModels;
   
 namespace weatherit.blazorwasm.Pages;
 
-public partial class WeatherForecastPageBase : ComponentBase
+public partial class WeatherForecastsPageBase : ComponentBase
 {
   #region Fields
   

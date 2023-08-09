@@ -1,5 +1,5 @@
-﻿@page "/{{ModelCode}}"
-@inherits {{ModelCode}}PageBase
+﻿@page "/{{ModelCode}}s"
+@inherits {{ModelCode}}sPageBase
 
 <PageTitle>{{MultipleDisplayName}}</PageTitle>
 
