@@ -13,6 +13,6 @@ using weatherit.core.Models;
 
 namespace weatherit.blazorwasm.Pages;
 
-public partial class WeatherForecast
+public partial class WeatherForecastPageBase
 {
 }

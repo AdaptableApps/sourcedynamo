@@ -9,7 +9,7 @@ public partial class {{ModelCode}}PageBase : ComponentBase
 {
   #region Fields
   
-  private {{ModelCode}}MultipleViewModel _MultipleViewModel = new();
+  protected {{ModelCode}}MultipleViewModel _MultipleViewModel = new();
 
   #endregion Fields
 

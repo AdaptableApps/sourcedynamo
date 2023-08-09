@@ -1,5 +1,5 @@
 ﻿@page "/{{ModelCode}}"
-@inherits {{ModelCode}}Base
+@inherits {{ModelCode}}PageBase
 
 <PageTitle>{{MultipleDisplayName}}</PageTitle>
 
@@ -13,15 +13,13 @@ else
 {
   <table class="table">
     <thead>
-      <tr>
-{{Headings}}
+      <tr>{{Headings}}
       </tr>
     </thead>
     <tbody>
       @foreach (var model in _MultipleViewModel.ModelArray)
       {
-        <tr>
-{{Rows}}
+        <tr>{{Rows}}
         </tr>
       }
     </tbody>

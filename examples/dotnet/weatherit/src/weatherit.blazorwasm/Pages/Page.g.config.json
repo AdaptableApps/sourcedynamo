@@ -3,7 +3,7 @@
     {
       "CodeGenTypeEnum": "ForEach",
       "CodeGenTemplateFileName": "{{|RootFileName|}}.g.razor.template",
-      "CodeGenOutputFileName": "{{ModelCode}}Page.g.razor",
+      "CodeGenOutputFileName": "{{ModelCode}}s{{|RootFileName|}}.g.razor",
       "CodeGenFrequencyEnum": "Always",
       "CodeGenDataSourceEnum": "ExcelFile",
       "DataTableName": "Model",

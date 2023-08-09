@@ -1,5 +1,5 @@
 ﻿@page "/WeatherForecast"
-@inherits WeatherForecastBase
+@inherits WeatherForecastPageBase
 
 <PageTitle>Weather Forecasts</PageTitle>
 
@@ -13,8 +13,7 @@ else
 {
   <table class="table">
     <thead>
-      <tr>
-        
+      <tr>        
         <th>Forecast Date</th>        
         <th>Temp. (C)</th>        
         <th>Temp. (F)</th>        
@@ -24,8 +23,7 @@ else
     <tbody>
       @foreach (var model in _MultipleViewModel.ModelArray)
       {
-        <tr>
-    
+        <tr>    
           <td>@model.Date.ToShortDateString()</td>    
           <td>@model.TemperatureC</td>    
           <td>@model.TemperatureF</td>    
