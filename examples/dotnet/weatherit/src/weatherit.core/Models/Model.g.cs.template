@@ -1,0 +1,24 @@
+﻿/*
+ *
+ * Generated Class - Do not Modify!
+ *
+ */
+
+namespace weatherit.core.Models;
+
+public partial class {{ModelCode}}
+{
+  #region Properties - Generated Do not Modify!
+{{Properties}}
+
+  #endregion Properties - Generated Do not Modify!
+
+  #region Constructors - Generated Do not Modify!
+
+  public {{ModelCode}}()
+  {
+    //Just to have public parameter-less constructor
+  }
+
+  #endregion Constructors - Generated Do not Modify!
+}

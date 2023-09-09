@@ -1,0 +1,12 @@
+﻿namespace weatherit.core.Models;
+
+public partial class {{ModelCode}}
+{
+  #region Properties
+
+  #endregion Properties
+
+  #region Methods
+
+  #endregion Methods
+}

@@ -1,0 +1,68 @@
+﻿{
+  "CodeGenFiles": [
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.g.cs.template",
+      "CodeGenOutputFileName": "{{ModelCode}}MultipleViewModel.g.cs",
+      "CodeGenFrequencyEnum": "Always",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "Model",
+      "DataColumnName": "{{|*|}}",
+      "ParentFilterColumnName": "ModelCode",
+      "CodeGenFileFields": [
+        {
+          "CodeGenTypeEnum": "ForEach",
+          "Find": "{{ModelCode}}",
+          "CodeGenFileFieldReplace": {
+            "CodeGenReplaceTypeEnum": "Lookup",
+            "CodeSnippet": [
+              "{{ModelCode}}"
+            ],
+            "DataTableName": "Model",
+            "DataColumnName": "{{|*|}}",
+            "ChildFilterColumnName": "ModelCode",
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "HasPage",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "true"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.cs.template",
+      "CodeGenOutputFileName": "{{ModelCode}}MultipleViewModel.cs",
+      "CodeGenFrequencyEnum": "IfDoesNotExist",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "Model",
+      "DataColumnName": "{{|*|}}",
+      "ParentFilterColumnName": "ModelCode",
+      "CodeGenFileFields": [
+        {
+          "CodeGenTypeEnum": "ForEach",
+          "Find": "{{ModelCode}}",
+          "CodeGenFileFieldReplace": {
+            "CodeGenReplaceTypeEnum": "Lookup",
+            "CodeSnippet": [
+              "{{ModelCode}}"
+            ],
+            "DataTableName": "Model",
+            "DataColumnName": "{{|*|}}",
+            "ChildFilterColumnName": "ModelCode",
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "HasPage",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "true"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
