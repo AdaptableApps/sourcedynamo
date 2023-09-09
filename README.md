@@ -12,5 +12,6 @@ With Source Dynamo, you'll be able to generate high-quality code faster than you
 
 Don't wait any longer to try Source Dynamo - the ultimate terminal-based code automation tool that will take your productivity to the next level!
 
-Please see the wiki for instructions on how to install and use Source Dynamo:
-[Wiki](https://github.com/AdaptableApps/sourcedynamo/wiki)
+Please see our [website](https://www.adaptableapps.net/sourcedynamo.html) for pricing and purchasing.
+
+Please see the [wiki](https://github.com/AdaptableApps/sourcedynamo/wiki) for instructions on how to install and use Source Dynamo.
