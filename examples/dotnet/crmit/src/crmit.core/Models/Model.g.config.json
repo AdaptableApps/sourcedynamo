@@ -1,0 +1,52 @@
+﻿{
+  "CodeGenFiles": [
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.g.cs.template",
+      "CodeGenOutputFileName": "{{ModelCode}}.g.cs",
+      "CodeGenFrequencyEnum": "Always",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "Model",
+      "DataColumnName": "{{|*|}}",
+      "ParentFilterColumnName": "ModelCode",
+      "CodeGenFileFields": [
+        {
+          "CodeGenTypeEnum": "ForEach",
+          "Find": "{{Properties}}",
+          "CodeGenFileFieldReplace": {
+            "CodeGenReplaceTypeEnum": "Lookup",
+            "CodeSnippet": [
+              "    ",
+              "    public {{DataType}} {{ModelPropertyCode}}",
+              "    {",
+              "      get;",
+              "      set;",
+              "    }"
+            ],
+            "DataTableName": "ModelProperty",
+            "DataColumnName": "{{|*|}}",
+            "TransformForeignKeyIdToCode": "false",
+            "ChildFilterColumnName": "ModelCode",
+            "CodeGenAdditionalColumnFilters": [
+              {
+                "FilterColumnName": "IsGenerated",
+                "FilterColumnComparisonOperator": "Equals",
+                "FilterColumnValue": "true"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.cs.template",
+      "CodeGenOutputFileName": "{{ModelCode}}.cs",
+      "CodeGenFrequencyEnum": "IfDoesNotExist",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "Model",
+      "DataColumnName": "{{|*|}}",
+      "CodeGenFileFields": []
+    }
+  ]
+}

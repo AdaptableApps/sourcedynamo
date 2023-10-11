@@ -1,0 +1,37 @@
+/*
+ *
+ * Generated Class - Do not Modify!
+ *
+ */
+
+using crmit.core.Models;
+
+namespace crmit.client.ViewModels;
+
+public partial class {{ModelCode}}ViewModel
+{
+  #region Fields
+  
+  private {{ModelCode}} _{{ModelCode}};
+
+  #endregion Fields
+
+  #region Properties
+
+  protected {{ModelCode}} Model => _{{ModelCode}};
+
+  #endregion Properties
+  
+  #region Constructors
+
+  public {{ModelCode}}ViewModel({{ModelCode}} model)
+  {
+    _{{ModelCode}}= model;
+  }
+
+  #endregion Constructors
+
+  #region Methods
+ 
+  #endregion Methods
+}

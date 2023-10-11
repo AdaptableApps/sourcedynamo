@@ -1,0 +1,39 @@
+﻿{
+  "CodeGenFiles": [
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.g.razor.cs.template",
+      "CodeGenOutputFileName": "{{ModelCode}}s{{|RootFileName|}}.g.razor.cs",
+      "CodeGenFrequencyEnum": "Always",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "Model",
+      "DataColumnName": "{{|*|}}",
+      "CodeGenAdditionalColumnFilters": [
+        {
+          "FilterColumnName": "HasPage",
+          "FilterColumnComparisonOperator": "Equals",
+          "FilterColumnValue": "true"
+        }
+      ],
+      "CodeGenFileFields": []
+    },
+
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.razor.cs.template",
+      "CodeGenOutputFileName": "{{ModelCode}}s{{|RootFileName|}}.razor.cs",
+      "CodeGenFrequencyEnum": "IfDoesNotExist",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "Model",
+      "DataColumnName": "{{|*|}}",
+      "CodeGenAdditionalColumnFilters": [
+        {
+          "FilterColumnName": "HasPage",
+          "FilterColumnComparisonOperator": "Equals",
+          "FilterColumnValue": "true"
+        }
+      ],
+      "CodeGenFileFields": []
+    }
+  ]
+}

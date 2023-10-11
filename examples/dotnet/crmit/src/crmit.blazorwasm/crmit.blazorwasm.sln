@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crmit.blazorwasm", "crmit.blazorwasm.csproj", "{9EA9D4A0-D397-43A8-928D-2BDD93F80A9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crmit.core", "..\crmit.core\crmit.core.csproj", "{1E41501B-37C5-4ED3-9256-ED0DBB918CD2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ci", "ci", "{751C932C-F82E-49BC-AEA9-7517C8EE86B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crmit.client", "..\crmit.client\crmit.client.csproj", "{1BBF3623-0A03-4D57-9D58-2D008458B114}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EA9D4A0-D397-43A8-928D-2BDD93F80A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA9D4A0-D397-43A8-928D-2BDD93F80A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA9D4A0-D397-43A8-928D-2BDD93F80A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA9D4A0-D397-43A8-928D-2BDD93F80A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E41501B-37C5-4ED3-9256-ED0DBB918CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E41501B-37C5-4ED3-9256-ED0DBB918CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E41501B-37C5-4ED3-9256-ED0DBB918CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E41501B-37C5-4ED3-9256-ED0DBB918CD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BBF3623-0A03-4D57-9D58-2D008458B114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BBF3623-0A03-4D57-9D58-2D008458B114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BBF3623-0A03-4D57-9D58-2D008458B114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BBF3623-0A03-4D57-9D58-2D008458B114}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1E41501B-37C5-4ED3-9256-ED0DBB918CD2} = {751C932C-F82E-49BC-AEA9-7517C8EE86B2}
+		{1BBF3623-0A03-4D57-9D58-2D008458B114} = {751C932C-F82E-49BC-AEA9-7517C8EE86B2}
+	EndGlobalSection
+EndGlobal

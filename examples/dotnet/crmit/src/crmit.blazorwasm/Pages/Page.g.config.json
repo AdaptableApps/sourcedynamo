@@ -1,0 +1,54 @@
+﻿{
+  "CodeGenFiles": [
+    {
+      "CodeGenTypeEnum": "ForEach",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}.g.razor.template",
+      "CodeGenOutputFileName": "{{ModelCode}}s{{|RootFileName|}}.g.razor",
+      "CodeGenFrequencyEnum": "Always",
+      "CodeGenDataSourceEnum": "ExcelFile",
+      "DataTableName": "Model",
+      "DataColumnName": "{{|*|}}",
+      "CodeGenAdditionalColumnFilters": [
+        {
+          "FilterColumnName": "HasPage",
+          "FilterColumnComparisonOperator": "Equals",
+          "FilterColumnValue": "true"
+        }
+      ],
+      "ParentFilterColumnName": "ModelCode",
+      "CodeGenFileFields": [
+        {
+          "CodeGenTypeEnum": "ForEach",
+          "Find": "{{Headings}}",
+          "CodeGenFileFieldReplace": {
+            "CodeGenReplaceTypeEnum": "Lookup",
+            "CodeSnippet": [
+              "        ",
+              "        <th>{{DisplayName}}</th>"
+            ],
+            "DataTableName": "ModelProperty",
+            "DataColumnName": "{{|*|}}",
+            "TransformForeignKeyIdToCode": "false",
+            "ChildFilterColumnName": "ModelCode"
+          }
+        },
+
+        {
+          "CodeGenTypeEnum": "ForEach",
+          "Find": "{{Rows}}",
+          "CodeGenFileFieldReplace": {
+            "CodeGenReplaceTypeEnum": "Lookup",
+            "CodeSnippet": [
+              "    ",
+              "          <td>@model.{{ModelPropertyCode}}{{DisplayFormatExpression}}</td>"
+            ],
+            "DataTableName": "ModelProperty",
+            "DataColumnName": "{{|*|}}",
+            "TransformForeignKeyIdToCode": "false",
+            "ChildFilterColumnName": "ModelCode"
+          }
+        }
+      ]
+    }
+  ]
+}
