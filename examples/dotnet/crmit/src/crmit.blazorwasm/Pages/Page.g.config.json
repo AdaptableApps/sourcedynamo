@@ -40,7 +40,7 @@
             "CodeGenReplaceTypeEnum": "Lookup",
             "CodeSnippet": [
               "    ",
-              "          <td>@model.{{ModelPropertyCode}}{{DisplayFormatExpression}}</td>"
+              "          <td>@model.{{PropertyName}}{{DisplayFormatExpression}}</td>"
             ],
             "DataTableName": "ModelProperty",
             "DataColumnName": "{{|*|}}",

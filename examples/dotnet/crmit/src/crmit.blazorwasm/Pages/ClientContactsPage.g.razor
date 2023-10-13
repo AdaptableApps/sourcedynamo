@@ -14,16 +14,22 @@ else
   <table class="table">
     <thead>
       <tr>        
+        <th>First Name</th>        
+        <th>Last Name</th>        
         <th>Email Address</th>        
-        <th>Client Business Number</th>
+        <th>Phone Number</th>        
+        <th>Mobile Number</th>
       </tr>
     </thead>
     <tbody>
       @foreach (var model in _MultipleViewModel.ModelArray)
       {
         <tr>    
-          <td>@model.EmailAddress</td>    
-          <td>@model.ClientBusinessNumber</td>
+          <td>@model.First_Name</td>    
+          <td>@model.Last_Name</td>    
+          <td>@model.Email_Address</td>    
+          <td>@model.Phone_Number</td>    
+          <td>@model.Mobile_Number</td>
         </tr>
       }
     </tbody>

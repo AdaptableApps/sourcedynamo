@@ -2,8 +2,8 @@
   "CodeGenFiles": [
     {
       "CodeGenTypeEnum": "ForEach",
-      "CodeGenTemplateFileName": "{{|RootFileName|}}.g.razor.template",
-      "CodeGenOutputFileName": "{{|RootFileName|}}.g.razor",
+      "CodeGenTemplateFileName": "{{|RootFileName|}}_g.razor.template",
+      "CodeGenOutputFileName": "{{|RootFileName|}}_g.razor",
       "CodeGenFrequencyEnum": "Always",
       "CodeGenDataSourceEnum": "ExcelFile",
       "DataTableName": "Config",

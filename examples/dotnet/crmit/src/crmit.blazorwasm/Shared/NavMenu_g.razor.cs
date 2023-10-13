@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace crmit.blazorwasm.Shared;
 
-public partial class NavMenu : ComponentBase
+public partial class NavMenu_g
 {
   private bool collapseNavMenu = true;
 

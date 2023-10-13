@@ -15,12 +15,12 @@ public partial class Client
       get;
       set;
     }    
-    public string PhysicalAddress
+    public string Physical_Address
     {
       get;
       set;
     }    
-    public string CompanyRegistrationNumber
+    public string Company_Registration_Number
     {
       get;
       set;
