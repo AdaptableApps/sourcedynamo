@@ -2,7 +2,8 @@
 using System.Text.Json;
 using crmit.core.Models;
 
-namespace crmit.webapi.Controllers
+namespace crmit.webapi.Controllers;
+
 public partial class ClientContactController
 {
   #region Properties

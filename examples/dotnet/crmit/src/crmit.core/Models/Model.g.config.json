@@ -17,7 +17,7 @@
             "CodeGenReplaceTypeEnum": "Lookup",
             "CodeSnippet": [
               "    ",
-              "    public {{DataType}} {{ModelPropertyCode}}",
+              "    public {{DataType}} {{PropertyName}}",
               "    {",
               "      get;",
               "      set;",

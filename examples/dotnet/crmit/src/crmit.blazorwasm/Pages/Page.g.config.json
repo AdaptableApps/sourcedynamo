@@ -24,7 +24,7 @@
             "CodeGenReplaceTypeEnum": "Lookup",
             "CodeSnippet": [
               "        ",
-              "        <th>{{DisplayName}}</th>"
+              "        <th>{{PropertyDisplayName}}</th>"
             ],
             "DataTableName": "ModelProperty",
             "DataColumnName": "{{|*|}}",
