@@ -37,6 +37,6 @@ if ($ValidData)
   Write-Host "WI_CODEGEN_DATA_FILE = $WI_CODEGEN_DATA_FILE"
 
   Write-Host ""
-  Write-Host sourcedynamo action=codegen codegendatafile="$WI_CODEGEN_DATA_FILE" productrootpath="$WI_ROOT_PATH"
-  sourcedynamo action=codegen codegendatafile="$WI_CODEGEN_DATA_FILE" productrootpath="$WI_ROOT_PATH"
+  Write-Host sourcedynamo action=codegen codegendatafile="$WI_CODEGEN_DATA_FILE" productrootpath="$WI_ROOT_PATH" excludefolders="bin"
+  sourcedynamo action=codegen codegendatafile="$WI_CODEGEN_DATA_FILE" productrootpath="$WI_ROOT_PATH" excludefolders="bin"
 }
