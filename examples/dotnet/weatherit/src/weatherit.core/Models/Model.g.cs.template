@@ -4,6 +4,8 @@
  *
  */
 
+#nullable restore
+
 namespace weatherit.core.Models;
 
 public partial class {{ModelCode}}

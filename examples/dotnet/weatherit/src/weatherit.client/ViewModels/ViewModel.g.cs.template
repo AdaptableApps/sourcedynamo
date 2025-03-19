@@ -4,6 +4,8 @@
  *
  */
 
+#nullable restore
+
 using weatherit.core.Models;
 
 namespace weatherit.client.ViewModels;

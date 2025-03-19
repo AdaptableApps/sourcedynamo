@@ -4,6 +4,8 @@
  *
  */
 
+#nullable restore
+
 namespace crmit.core.Models;
 
 public partial class {{ModelCode}}
